@@ -31,6 +31,3 @@ $red \____/_____//____/_/ /_/_____/_/ |_|   $reset ${bold}$USER@$HOSTNAME${reset
 "
 
 printf -- "-%.s" $(seq $cols)
-echo -e "\n"
-
-exit 0
