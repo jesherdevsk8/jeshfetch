@@ -5,13 +5,12 @@
 . /etc/os-release                                                              
 
 # Styles...
-
+# cores - https://unix.stackexchange.com/questions/269077/tput-setaf-color-table-how-to-determine-color-codes
 red="$(tput setaf 1)"
 bold="$(tput bold)"
 reset="$(tput sgr0)"
 
 # Vars
-email="jesherdevsk8@gmail.com"
 github="github.com/jesherdevsk8"
 
 # Get terminal col width...
@@ -23,11 +22,11 @@ cols=$(tput cols)
 clear
 
 echo "
-$red        ____________  __  ____________  $reset ${bold}Email:${reset} $email
+$red        ____________  __  ____________  $reset ${bold}Github:${reset} $github
 $red       / / ____/ ___// / / / ____/ __ \ $reset ${bold}$PRETTY_NAME${reset}
 $red  __  / / __/  \__ \/ /_/ / __/ / /_/ / $reset ${bold}Kernel:${reset} $(uname -rm)
 $red / /_/ / /___ ___/ / __  / /___/ _, _/  $reset ${bold}Uptime:${reset} $(uptime -p | cut -d' ' -f2-)
-$red \____/_____//____/_/ /_/_____/_/ |_|   $reset ${bold}$USER@$HOSTNAME${reset} | ${bold}Github:${reset} $github
+$red \____/_____//____/_/ /_/_____/_/ |_|   $reset ${bold}$USER@$HOSTNAME$HOST${reset}
 "
 
 printf -- "-%.s" $(seq $cols)
